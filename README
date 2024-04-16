@@ -1,0 +1,55 @@
+My build of suckless st v0.9.2.
+Made with lot of patches. Inspired by daddy Luke Smith.
+Check patches folder.
+Keybinds taken from Lukes st:
+## Unique features (using dmenu)
+
++ **follow urls** by pressing `alt-l`
++ **copy urls** in the same way with `alt-y`
++ **copy the output of commands** with `alt-o`
+
+## Bindings for
+
++ **scrollback** with `alt-↑/↓` or `alt-pageup/down` or `shift` while scrolling the
+  mouse.
++ OR **vim-bindings**: scroll up/down in history with `alt-k` and `alt-j`.
+  Faster with `alt-u`/`alt-d`.
++ **zoom/change font size**: same bindings as above, but holding down shift as
+  well. `alt-home` returns to default
++ **copy text** with `alt-c`, **paste** is `alt-v` or `shift-insert`
+
+
+st - simple terminal
+--------------------
+st is a simple terminal emulator for X which sucks less.
+
+
+Requirements
+------------
+In order to build st you need the Xlib header files.
+
+
+Installation
+------------
+Edit config.mk to match your local setup (st is installed into
+the /usr/local namespace by default).
+
+Afterwards enter the following command to build and install st (if
+necessary as root):
+
+    make clean install
+
+
+Running st
+----------
+If you did not install st with make clean install, you must compile
+the st terminfo entry with the following command:
+
+    tic -sx st.info
+
+See the man page for additional details.
+
+Credits
+-------
+Based on Aurélien APTEL <aurelien dot aptel at gmail dot com> bt source code.
+
